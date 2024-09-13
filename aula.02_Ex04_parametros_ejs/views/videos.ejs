@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <% if (!playlist) { %>
+    <h1>Faça login para assistir seus vídeos!</h1>
+      <% } else if(playlist && !video) {  %>
+        <h1>Confira uma playlist: </h1>
+      <% listaPlaylist.forEach((playlist) => { %>
+        <p><a href="/videos/<%= playlist %>/video"> <%= playlist %></a></p>
+     <%  } ) %>
+      <% } else if (playlist && video) { %>
+        <h1>Você está na playlist: <%=listaPlaylist[1] %></h1>
+        <h1>Assistindo o vídeo: <%= listaVideos[1] %></h1>
+     <% } %>
+</body>
+</html>
