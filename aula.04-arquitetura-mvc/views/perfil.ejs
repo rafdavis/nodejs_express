@@ -1,0 +1,11 @@
+<%- include ('partials/navbar.ejs') %>
+    <%- include (partials/header.ejs)%>
+    <h1>Bem vindo a página perfil!</h1>
+    <p> Faça login para continuar</p>
+
+    <%= perfil %>
+
+    <% if(!perfil){ %>
+    <p> <%= listaPerfil %></p>
+    <% } %>
+    <%- include (partials/header.ejs)%>

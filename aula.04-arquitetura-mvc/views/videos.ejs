@@ -1,0 +1,11 @@
+<%- include ('partials/navbar.ejs') %>
+<%- include (partials/header.ejs) %>
+    <h1>Bem vindo a página vídeos</h1>
+    <p>Essa página está sendo renderizada pelo Express.</p>
+
+    <%= videos %>
+
+    <% if(!videos){%>
+     <p><%= listaPlaylist %></p>
+    <%}%>
+    <%- include (partials/footer.ejs) %>
